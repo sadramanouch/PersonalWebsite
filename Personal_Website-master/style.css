@@ -1,0 +1,220 @@
+/* Reset styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: #12120F; /* Unified background color with the .background class */
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: green;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.Title {
+  background-color: red;
+  color: white; /* Ensure text contrast with the background */
+  padding: 10px;
+  text-align: center; /* Ensures proper centering */
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px; /* Unified padding */
+  text-align: center;
+}
+
+/* Header styles */
+header {
+  background-image: url("dd/Definless_logo.png");
+  padding: 130px;
+  color: #fff;
+  text-align: center; /* Align text properly */
+  background-size: cover;
+  background-position: center;
+}
+
+header a img {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 40px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: #ffae00;
+}
+
+.header-text {
+  margin-top: 40px;
+  max-width: 500px;
+  text-align: left; /* Ensures text alignment */
+}
+
+.header-text h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.header-text p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.header-text a {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #ffae00;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+.header-text a:hover {
+  background-color: #ffa500;
+}
+
+/* Services styles */
+.services {
+  padding: 80px 0;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Ensures proper alignment */
+}
+
+.services h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.service {
+  flex: 1;
+  margin: 0 10px; /* Consistent margin */
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.service img {
+  max-width: 400px;
+  height: auto; /* Ensures image retains its aspect ratio */
+  margin-bottom: 20px;
+}
+
+.service h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.service p {
+  font-size: 18px;
+  color: white; /* Ensures consistent color */
+  margin-bottom: 20px;
+}
+
+.service a {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #ffae00;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+.service a:hover {
+  background-color: #ffa500;
+}
+
+/* Beats styles */
+.beats {
+  text-align: center;
+  justify-content: center;
+}
+
+.beats h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.beat {
+  display: inline-block;
+  margin: 20px;
+  text-align: center; /* Ensures text alignment */
+  max-width: 300px;
+}
+
+.beat img {
+  max-width: 100%; /* Ensures image adapts to its container */
+  height: auto; /* Retains image aspect ratio */
+}
+
+.beat h3 {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.beat p {
+  font-size: 18px;  /* Typical paragraph size for readability */
+  color: #666;  /* Darker gray for better contrast */  /* Increased line height for easier reading */
+}
+
+.beat a {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: green; /* Aligns with link color */
+  color: white;
+  text-decoration: none;
+  border-radius: 1px;
+}
+
+.beat a:hover {
+  background-color: darkgreen; /* Darker shade on hover */
+}
+
+.beat audio {
+  width: 100%; /* Ensures audio controls fit within the beat */
+}
+
+audio::-internal-media-controls-download-button {
+  display: none;
+}

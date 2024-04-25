@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title class = "Title">Buy Beat</title>
+    <script src="code.js"></script>
+    <link rel="icon" href="sound.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #ffffff;
+            background-color: #12120F; /* Unified background color with the .background class */
+        }
+        .beat-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .beat-info img {
+            max-width: 900px;
+            margin-right: 20px;
+            align-items: center;
+        }
+        
+        .beat-details {
+            text-align: left;
+            padding-right: 12px;
+        }
+        .Title {
+            background-color: red;
+            color: white; /* Ensure text contrast with the background */
+            padding: 10px;
+            text-align: center; /* Ensures proper centering */
+        }
+
+        .Tit {
+            text-align: center;
+            font-weight: bold;
+            font-size: 2rem;
+            padding: 5px 15px;
+            background-color: green; /* Aligns with link color */
+            color: white;
+            text-decoration: none;
+            border-radius: 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="Title">Buy Beat</h1>
+    <div id="beatInfo" class="buy"></div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const beatName = urlParams.get('beat');
+        const beatPrice = urlParams.get('price');
+        const beatImageSrc = urlParams.get('image');
+        const beatAudio = urlParams.get('audio');
+
+        console.log(beatName)
+
+        if (beatName && beatPrice && beatImageSrc) {
+            const beatInfo = document.getElementById('beatInfo');
+
+            const beatInfoHTML = `
+                <div class="beat-info">
+                    <img src="${beatImageSrc}" alt="${beatName}">
+                    <div class="beat-details">
+                        <h3>${beatName}</h3>
+                        <p>Price: ${beatPrice}</p>
+                    </div>
+                    <audio controls controlsList="nodownload" src=${beatAudio}></audio>
+                </div>
+                <p class="Tit">If you want to buy "${decodeURIComponent(beatName)}", please message me on Instagram @definelessproductions with the beat name</p>
+            `;
+
+            beatInfo.innerHTML = beatInfoHTML;
+        }
+    </script>
+    <footer>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; 2024 Sadra Khorvash&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instagram : @Definelessproductions &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unauthorized copying or distribution is prohibited; violators will face legal action.</p>
+      </footer>
+</body>
+</html>
